@@ -1,0 +1,77 @@
+
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-btn{
+    transform: scale(0);
+    transition: 300ms transform cubic-bezier(0.71, -0.07, 0.13, 1.54);
+    width: 3rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #000;
+    padding: 10px;
+    border-radius: 100vw;
+    background-image: linear-gradient(to right,rgb(120, 112, 189), rgb(189, 149, 112));
+    background-size: 200%;
+    background-position: left;
+    grid-column: 3/3;
+    justify-self: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    opacity: 1;
+    backdrop-filter: blur(5px);
+}
+.contact-btn-visible{
+    transform: scale(1);
+    transition: 300ms transform cubic-bezier(0.71, -0.07, 0.13, 1.54);
+    transition-delay: 3200ms;
+}
+
+.Feedback,
+.btn{
+  width: 80vw;
+  max-width: 85rem;
+  margin: 10px;
+  background: transparent;
+  border: solid black 1px;
+  outline: none;
+  border-radius: 35px;
+  padding: 18px;
+  color: rgb(0, 0, 0);
+  transition: .25s ease;
+}
+.Feedback:hover,
+.btn:hover{
+    transform: translateZ(10px);
+    transform-style: preserve-3d;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+  height: 10rem;
+}
+.btn{
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+  background-image: linear-gradient(to right,rgb(120, 112, 189), rgb(189, 149, 112));
+  background-size: 200%;
+  background-position: left;
+  transition: 1000ms ease;
+  font-size: 1.5rem;
+}
+.btn:hover{
+  background-position: right;
+  background-image: linear-gradient(to right,rgb(120, 112, 189), rgb(207, 150, 97));
+  transition: 1000ms ease;
+  background-size: 200%;
+}

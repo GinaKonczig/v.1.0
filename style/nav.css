@@ -1,0 +1,143 @@
+
+nav{
+    position: sticky;
+    top: 0rem;
+    display: grid;
+    grid-template-columns: 25% 1fr 25%;
+    align-items: center;
+    min-height: 5rem;
+    width: 100%;
+    background: transparent;
+    z-index: 99999999;
+    transition: 400ms ease;
+}
+
+.nav-links{
+    transform: translateX(-100%);
+    transition: 200ms ease;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #000;
+    backdrop-filter: blur(5px);
+    border-radius: 0px;
+    height: clamp(20rem, calc(100vh - 4rem), 100vh);
+    width: clamp(12rem, 50vw, 20rem);
+    top: 5rem;
+    font-size: 1.5rem;
+    list-style: none;
+    z-index: 999999999;
+    overflow: hidden;
+}
+.lighter-bg{
+    background: rgba(0, 0, 0, 0.856);
+    border-radius: 0px 35px 0px 0px;
+}
+
+.nav-links li{
+    opacity: 0;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 100ms ease;
+}
+.nav-links a:hover,
+.nav-links a:focus{
+    transition: .1s ease;
+    color: rgba(190, 190, 190, 0.787);
+}
+
+.nav-active{
+    transform: translateX(0%);
+    transition: 200ms ease;
+}
+
+.logo{
+    cursor: pointer;
+    grid-column: 2/3;
+    justify-self: center;
+    transform: scale(0);
+    transition: 300ms scale ease;
+}
+
+.logo-visible{
+    transform: scale(1);
+    transition: 300ms all cubic-bezier(0.71, -0.07, 0.13, 1.54);
+    transition-delay: 3000ms;
+}
+
+.logo svg{
+    transform: translateY(.25rem);
+    height: 3rem;
+    fill: rgb(255, 255, 255);
+    transition: 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.dark-logo svg{
+    fill: rgb(0, 0, 0);
+    transition: 200ms ease;
+    height: 2rem;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 100vw;
+    transition: 200ms ease;
+  }
+.black div{
+    background: rgb(0, 0, 0);
+    transition: 200ms ease;
+}
+
+.burger{
+    display: block;
+    margin: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 300ms;
+    padding: 0;
+}
+.burger-visible{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-delay: 2800ms;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-0.75px, 5px);
+    transition: 200ms ease;
+}
+.toggle .line2{
+    transform: rotate(45deg) translate(-0.75px, -5px);
+    transition: 200ms ease;
+}
+
+@keyframes NavLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes BurgerIn{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
