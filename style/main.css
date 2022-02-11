@@ -116,8 +116,8 @@ section{
     background-position: bottom;
     background-size: 3000px;
 }
-.contact img{
-    width: clamp(25rem, 40vw, 45rem);
+.contact p{
+    margin-bottom: 5rem;
 }
 
 .bottom{
