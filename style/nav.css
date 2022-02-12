@@ -24,7 +24,7 @@ nav{
     backdrop-filter: blur(5px);
     border-radius: 0px;
     height: clamp(20rem, calc(100vh - 4rem), 100vh);
-    width: clamp(12rem, 50vw, 20rem);
+    width: clamp(10rem, 50vw, 15rem);
     top: 5rem;
     font-size: 1.5rem;
     list-style: none;

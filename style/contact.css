@@ -10,7 +10,7 @@
 .contact-btn{
     transform: scale(0);
     transition: 300ms transform cubic-bezier(0.71, -0.07, 0.13, 1.54);
-    width: 3rem;
+    width: 2.8rem;
     font-size: 1.2rem;
     font-weight: bolder;
     color: #000;
@@ -46,7 +46,7 @@
   border-radius: 35px;
   padding: 18px;
   color: rgb(0, 0, 0);
-  transition: .25s ease;
+  transition: 250ms ease;
 }
 .Feedback:hover,
 .btn:hover{
@@ -55,8 +55,12 @@
     background: rgba(0, 0, 0, 0.1);
 }
 
+.Feedback{
+  font-size: 1.25rem;
+}
 textarea{
-  height: 10rem;
+  height: 12rem;
+  font-size: 1rem;
 }
 .btn{
   padding: 12px;
@@ -74,4 +78,8 @@ textarea{
   background-image: linear-gradient(to right,rgb(120, 112, 189), rgb(207, 150, 97));
   transition: 1000ms ease;
   background-size: 200%;
+}
+
+::placeholder{
+  color: rgb(0, 0, 0);
 }
